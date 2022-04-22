@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Find average and result</title>
+</head>
+<style>
+    body
+     {
+        background-color:black;
+        color:;white;
+        
+      }
+      h2{
+          color:aqua;
+          font-size: larger;
+      }
+      button{
+
+       padding:5px;
+      }
+ </style>
+<body>
+    
+        <form>
+        Name:<input type="text" id="txtName">   
+        Class:<input type="text" id="txtClass"> <br/>
+   
+        English:<br><Input type="number" id="english" value=""><br>
+        Maths:<br><Input type="number" id="maths" value=""><br>
+        Tamil:<br><Input type="text" id="tamil" value=""><br>
+        </form>
+        <button type="button" onclick="getReport()";>Clickhere</button>
+
+ 
+        <p id="Result"></p>
+
+  
+    <script>
+        function getReport(){
+            var average;
+            var cal=document.getElementById("english").value;
+             var english=parseInt(cal)
+             var cal=document.getElementById("maths").value;
+             var maths=parseInt(cal)
+             var cal=document.getElementById("tamil").value;
+             var tamil=parseInt(cal)
+
+             average=(english+tamil+maths)/3;
+
+             if(average>90){
+                 document.getElementById("Result").innerHTML="Distinction";
+             }
+             else if(average>80){
+                 document.getElementById("Result").innerHTML="First class";
+
+             }
+
+             else if(average>70){
+                document.getElementById("Result").innerHTML="Second class ";
+
+             }
+
+    
+
+ 
+</script>
+</body>
+</html>

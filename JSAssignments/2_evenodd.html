@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>even and odd numbers</title>
+</head>
+<body>
+<body style="background: lightblue">
+<h2>Generate Even and Odd numbers and their count</h2>
+<p id="demo"></p>
+<p id="demo1"></p>
+
+
+<script>
+document.write("Odd numbers:");
+//for loop for printing odd numbers
+let count=0;
+for (var i=1;i<=100;i++){
+    if(i%2 !=0){
+    document.write(i+" ");
+    count++;
+    }
+}
+
+document.getElementById("demo").innerHTML = "Odd number count is:"+count ;
+
+     
+            
+document.write("<br>")
+document.write("Even numbers: ");
+ //for loop for printing even numbers
+ let rcount=0;
+ for(var i=0;i<=100;i++){   
+     if(i%2 ==0){
+     document.write(i+" ")
+     rcount++;
+     }
+    }
+     
+ document.getElementById("demo1").innerHTML = "Even number count is:"+rcount ;
+     
+</script>
+</body>
+
+</html>

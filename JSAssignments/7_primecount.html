@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Prime number</title>
+   </head>
+        
+    <style>
+        body {
+            background-color:black;
+            color:white;
+            
+          }
+          h2{
+              color:aqua;
+              font-size: larger;
+          }
+     </style>
+
+<body>
+    <h3>Number of Prime Numbers</h3>
+
+
+<p>To Check The Number of Prime Numbers Between A Range</p>
+
+<button onclick="prime()">Click Here</button>
+
+<p id="Output"></p>
+
+<script>
+function prime() {
+  var x = 5
+  var y = 30
+  //Converting the user input to array
+  const input = [];
+
+  for(let i =x ;i<=y;i++)
+  {
+      input.push(i);
+  }
+  let len = input.length;
+  var count = 0;
+
+  for(i = 0;i < len;i++)
+  {
+      if(CheckPrime(input[i]) == true) 
+      {
+          count++;
+      }
+  }
+  document.getElementById("Output").innerHTML = "The Number Of Prime Numbers Between " + input[0] + " and " + input[len-1] + " is " + count ;
+}  
+function CheckPrime(number)
+{
+    if(number <= 1)
+    return false;
+    for(let i = 2;i<number;i++)
+    {
+        if(number % i == 0)
+        return false;
+    }
+    return true;
+}
+</script>
+
+  </body>

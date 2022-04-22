@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Prime number</title>
+   </head>
+        
+    <style>
+        body {
+            background-color:black;
+            color:white;
+            
+          }
+          h2{
+              color:aqua;
+              font-size: larger;
+          }
+     </style>
+        <body>
+            <h2>Prime number or not a prime number</h2>
+            <script>
+            var num, i, chk=0;
+            var num=parseInt(prompt("Enter the number"));
+            for(i=2; i<num; i++)
+            {
+              if(num%2==0)
+              {
+                chk++;
+                break;
+              }
+            }
+            if(chk==0)
+              document.write(num + " is a Prime Number");
+            else
+              document.write(num + " is not a Prime Number");
+</script>
+</body>
+<html>
